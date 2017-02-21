@@ -1,7 +1,14 @@
+
+import java.awt.Canvas;
 import java.util.ArrayList;
 import java.util.Scanner;
-
-public class Draft
+import java.awt.Color;
+import java.awt.Component;
+import java. awt.Canvas;
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+public class Draft extends Jframe
 	{
 		static int randomNumber;
 		static int number = 1;
@@ -11,12 +18,152 @@ public class Draft
 		static ArrayList<Team> myRoster = new ArrayList<Team>();
 		public static void main(String[] args)
 			{
+			jayFrame();
 			welcomeCoach();
 			fillRoster();
 			myTeam();
 			myScore();
 			}
-		
+				{
+		  			Draft canvas = new Draft();
+			        JFrame frame = new JFrame();
+			        frame.setSize(900, 900);
+			        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			        frame.getContentPane().add(canvas).setBackground(Color.black);
+			        frame.setLocationRelativeTo(null); //Sets JPanel to center of screen 
+			        frame.setResizable(false);
+			        frame.setVisible(true);
+		    	}
+			public static void jayFrame()
+			{
+			    {
+					name = JOptionPane.showInputDialog("What is your name?");  
+					JOptionPane.showMessageDialog(frame, "Hi, " + name);
+					
+					Object[] options = {"Axemen", "Puck", "Beaver"};
+					className = JOptionPane.showOptionDialog(frame, "What team do you coach?",
+							"Your time, effort, and glory",
+							JOptionPane.YES_NO_CANCEL_OPTION,
+							JOptionPane.QUESTION_MESSAGE,
+							null, options, options[2]);
+					 
+					
+					switch(className)
+						{
+						case 0:
+							{
+							JOptionPane.showMessageDialog(frame, "TIMBER!");
+							break;
+							}
+						case 1:
+							{
+							JOptionPane.showMessageDialog(frame, "TD's at top cheddar!");
+							break;
+							}
+						case 2:
+							{
+							JOptionPane.showMessageDialog(frame, "Dam the score go for broke!");
+							break;
+							}
+						}
+					final String[] genre = { "Pucks", "Beavers", "Axemen" };
+
+						{
+						final JFrame frame = new JFrame();
+					    String team = (String) JOptionPane.showInputDialog(frame, 
+					            "Which logo would you like out of the three teams?",
+					            "Logo",
+					            JOptionPane.QUESTION_MESSAGE, 
+					            null, 
+					            genre, 
+					            genre[0]);
+					    JOptionPane.showMessageDialog(frame, "alrighty then ya hoser");
+
+
+					      }
+				    }
+			}
+			public void paint(Graphics graphics) 
+			{
+			 graphics.setColor(Color.white);
+			 graphics.fillRect(47, 247, 700, 200);
+			 
+			 graphics.setColor(Color.red);
+			 graphics.fillOval(47, 247, 500, 200);
+			 
+			 graphics.setColor(Color.white);
+			 graphics.fillOval(100, 247, 500, 200);
+			 
+			 graphics.setColor(Color.red);
+			 graphics.fillRect(400, 247, 40, 200);
+			 
+			 graphics.setColor(Color.red);
+			 graphics.fillRect(400, 247, 200, 40);
+			 
+			 graphics.setColor(Color.red);
+			 graphics.fillRect(400, 300, 200, 40);
+			 
+			}
+			public void paint1(Graphics graphics)
+			{
+				//Beaverlogo
+				 graphics.setColor(Color.white);
+				 graphics.fillRect(47, 247, 700, 200);
+				 
+				 graphics.setColor(Color.blue);
+				 graphics.fillRect(400, 247, 40, 200);
+						 
+				 graphics.setColor(Color.blue);
+				 graphics.fillOval(400, 240, 200, 125);
+						 
+				 graphics.setColor(Color.blue);
+				 graphics.fillOval(400, 343, 200, 125);	
+				 
+				 graphics.setColor(Color.white);
+				 graphics.fillOval(450, 260, 125, 75);
+						 
+				 graphics.setColor(Color.white);
+				 graphics.fillOval(450, 370, 125, 75);	
+			}
+			public void paint11(Graphics graphics)
+			{
+				//puckslogo
+				 graphics.setColor(Color.white);
+				 graphics.fillRect(47, 247, 700, 200);
+				 
+				 graphics.setColor(Color.black);
+				 graphics.fillOval(47, 247, 200, 200);
+				 
+				 graphics.setColor(Color.yellow);
+				 graphics.fillRect(400, 247, 40, 400);
+				 
+				 graphics.setColor(Color.yellow);
+				 graphics.fillRect(400, 247, 200, 40);
+				 
+				 graphics.setColor(Color.yellow);
+				 graphics.fillRect(400, 375, 200, 40);
+				 
+				 graphics.setColor(Color.yellow);
+				 graphics.fillRect(570, 246, 40, 169);
+			}
+			public void paint111(Graphics graphics)
+			{
+				//axemenlogo
+				 graphics.setColor(Color.white);
+				 graphics.fillRect(47, 247, 700, 200);
+				 
+				 graphics.setColor(Color.green);
+				 graphics.fillRect(400, 247, 40, 200);
+				 
+				 graphics.setColor(Color.green);
+				 graphics.fillRect(400, 247, 200, 40);
+				 
+				 graphics.setColor(Color.green);
+				 graphics.fillRect(400, 375, 200, 40);
+				 
+				 graphics.setColor(Color.green);
+				 graphics.fillRect(570, 247, 40, 200);
+			}
 		public static void fillRoster()
 		{
 			roster.add(new Team ("Jack", "quarterback", 52, 367, 0, 4, 8));
@@ -37,6 +184,24 @@ public class Draft
 			roster.add(new Team ("Blaze", "Receiver", 42, 420, 0, 2, 4));
 			roster.add(new Team ("Tuk Tuk", "Runningback", 14, 902, 0, 4, 9));
 			roster.add(new Team ("Saac", "Quarterback", 60, 431, 2, 4, 9));
+			roster.add(new Team ("Jose", "quarterback", 72, 397, 1, 4, 8));
+			roster.add(new Team ("Wess", "quarterback", 81, 125, 2, 5, 9));
+			roster.add(new Team ("Ron", "Running Back", 33, 771, 0, 4, 8));
+			roster.add(new Team ("Gerald", "Reciever", 63, 976, 0, 3, 9));
+			roster.add(new Team ("Marx", "Running Back", 94, 646, 5, 4, 9));
+			roster.add(new Team ("Stalin", "Mike Linebacker", 0, 0, 87, 2, 6));
+			roster.add(new Team ("Kennedy", "Outside Linebacker", 0, 0, 1776, 5, 10));
+			roster.add(new Team ("Roosevelt", "Safety", 25, 479, 63, 4, 9));
+			roster.add(new Team ("Darnell", "corner", 4, 182, 74, 4, 8));
+			roster.add(new Team ("William", "corner", 16, 103, 23, 4, 7));
+			roster.add(new Team ("Ferg", "Outside Linebacker", 0, 0, 94, 5, 8));
+			roster.add(new Team ("Rocky", "Mike Linebacker", 2, 0, 61, 4, 9));
+			roster.add(new Team ("Marshal", "corner", 4, 301, 86, 1, 7));
+			roster.add(new Team ("Stone", "safety", 6, 124, 61, 4, 8));
+			roster.add(new Team ("Rick", "fullback", 94, 1709, 0, 5, 10));
+			roster.add(new Team ("Earl", "Receiver", 42, 420, 0, 2, 4));
+			roster.add(new Team ("James", "Runningback", 14, 902, 0, 4, 9));
+			roster.add(new Team ("Isack", "Quarterback", 800, 1765, 8, 4, 10));
 		for (Team t : roster)
 			{
 				System.out.println(number +  ")" + t.getName() + " , "  + t.getPosition() + ",  coachability is  " + t.getCoachability() + " , "+ t.getOverall());
